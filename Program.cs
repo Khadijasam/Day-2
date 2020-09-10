@@ -63,29 +63,27 @@ namespace ConsoleApp5
 
         //TITLE CASE
 
+        //public static void Main(String[] args)
+        //{
+        //    string str = "hElLo wOrLD";
+        //    TextInfo ti = new CultureInfo("en-US").TextInfo;
+        //    Console.WriteLine("\"{0}\" to titlecase: {1}", str, ti.ToTitleCase(str));
+        //    Console.Read();
+        //}
+
+
+        //SHORTENING NAMES
+
+
         public static void Main(String[] args)
         {
-            string str = "hElLo wOrLD";
-            TextInfo ti = new CultureInfo("en-US").TextInfo;
-            Console.WriteLine("\"{0}\" to titlecase: {1}", str, ti.ToTitleCase(str));
-            Console.Read();
+            Console.WriteLine("Enter First Middle and Last Name: ");
+            string str = Console.ReadLine();
+            ShortNames.FirstMiddle(str);
 
-
-
-            //frequency of letter
-            int maxCHARS = 256;
-            int[] cal = new int[maxCHARS];
-            FrequencyCount.calculate(str, cal);
-            for (int i = 0; i < maxCHARS; i++)
-                if (cal[i] > 0)
-                {
-                    Console.WriteLine("Character " + (char)i);
-                    Console.ReadLine();
-                    Console.WriteLine("Occurrence = " + cal[i] + " times");
-                    Console.ReadLine();
-                }
-            
         }
+
+
 
 
     }
